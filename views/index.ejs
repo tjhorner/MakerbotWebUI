@@ -1,0 +1,35 @@
+<div class="title">
+  Welcome
+</div>
+
+<div class="general-content">
+  Hello! Welcome to the MakerBot WebUI. The file that shows this text is located
+  in <code>views/index.ejs</code>, if you want to change it. You should probably
+  change it to include information about your printing policy, for example.
+</div>
+
+<div class="title">
+  Print Queue
+</div>
+
+<div class="print-queue">
+  <% if(prints.length){ %>
+  <div class="header">
+    <span>File</span>
+    <span>Printer</span>
+    <span>Status</span>
+    <span>Owner</span>
+  </div>
+
+  <% prints.forEach(function(print) { %>
+  <span class="print <%= print.status().class %>">
+    <span class="name"><%= print.name %></span>
+    <span class="printer"><%= print.printer ? print.printer.name : "—" %></span>
+    <span class="status"><%- print.status().text %></span>
+    <span class="user"><%= print._creator.firstName %> <%= print._creator.lastName %></span>
+  </span>
+  <% }) %>
+  <% }else{ %>
+  <span class="muted center">No prints have been created... yet.</span>
+  <% } %>
+</div>

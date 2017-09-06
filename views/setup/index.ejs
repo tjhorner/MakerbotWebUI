@@ -1,0 +1,40 @@
+<div class="title">
+  Setup
+</div>
+
+<div class="general-content">
+  <h1>Hello!</h1>
+
+  <p>
+    To start, we need to set up your admin account. Fill in your
+    admin account details below, and then press next.
+  </p>
+
+  <br>
+
+  <form action="/setup" method="POST">
+    <p class="field">
+      <label for="first_name">First Name</label>
+      <input type="text" placeholder="John" name="first_name" id="first_name">
+    </p>
+
+    <p class="field">
+      <label for="last_name">Last Name</label>
+      <input type="text" placeholder="Doe" name="last_name" id="last_name">
+    </p>
+
+    <p class="field">
+      <label for="email">Email</label>
+      <input type="email" placeholder="me@domain.com" name="email" id="email">
+    </p>
+
+    <p class="field">
+      <label for="password">Password</label>
+      <input type="password" placeholder="hunter2" name="password" id="password">
+    </p>
+
+    <p class="field">
+      <button class="button">Register Admin Account</button>
+    </p>
+  </form>
+</div>

@@ -1,0 +1,308 @@
+*, * * {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  background: #F1F5F9;
+  width: 100%;
+  font-family: "Roboto";
+  color: #3c3c3c;
+}
+
+.muted {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: .8em;
+}
+
+.center {
+  text-align: center;
+}
+
+.print-queue .muted {
+  width: 100%;
+  float: right;
+}
+
+.content, .site-header, .footer {
+  max-width: 1000px;
+  margin: 10px auto;
+  margin-top: 20px;
+}
+
+.footer {
+  color: #989898;
+}
+
+.site-header .user-options {
+  float: right;
+}
+
+.print-status-bar, .print-queue, .form, #messages ul, .general-content {
+  padding: 15px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);
+  font-size: 1.3em;
+  box-sizing: border-box;
+}
+
+.general-content {
+  font-size: 1em;
+}
+
+.general-content h1:first-of-type {
+  margin: 0;
+}
+
+.general-content h1 {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.general-content p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+form {
+  margin: 0;
+}
+
+form input[type="file"] {
+  display: none;
+}
+
+.form {
+  font-size: 1em;
+}
+
+.form .preview {
+  margin-top: 15px;
+  display: none;
+}
+
+.form .preview.show {
+  display: block;
+}
+
+.form .preview .image {
+  width: 320px;
+  height: 200px;
+  box-shadow: 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);
+  border-radius: 3px;
+}
+
+.form .preview .left {
+  vertical-align: top;
+}
+
+.form .preview .right {
+  margin-left: 10px;
+}
+
+.form .preview .left, .form .preview .right {
+  display: inline-block;
+}
+
+.form .preview .right .name {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.form .preview .right div:not(.name) {
+  margin-bottom: 2px;
+}
+
+.form .dragdrop {
+  transition: background .3s, color .3s;
+  width: 100%;
+  height: 300px;
+  line-height: 300px;
+  font-size: 1.4em;
+  background: #fbfbfb;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+form.is-dragover .dragdrop {
+  background: #cecccc;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.print-status-bar.printing {
+  /*color: #007900;*/
+}
+
+.print-status-bar .print-button {
+  user-select: none;
+  -webkit-user-select: none;
+  transition: color .3s, box-shadow .3s, background .3s;
+  display: inline-block;
+  padding: 4px 9px 2px;
+  border-radius: 4px;
+  background: #ff4141;
+  float: right;
+  color: white;
+  font-size: 0.8em;
+  cursor: hand;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(50,50,93,.1), 0 2px 5px 0 rgba(50,50,93,.08), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent;
+}
+
+.print-status-bar .print-button:hover {
+  background: #ff0000;
+  box-shadow: 0 0 0 1px rgba(50,50,93,.1), 0 2px 5px 0 rgba(50,50,93,.1), 0 3px 9px 0 rgba(50,50,93,.08), 0 1px 1.5px 0 rgba(0,0,0,.08), 0 1px 2px 0 rgba(0,0,0,.08);
+}
+
+.print-status-bar .print-button:active {
+  box-shadow: 0 0 0 1px rgba(50,50,93,.08), 0 2px 5px 0 rgba(50,50,93,.06), 0 1px 1.5px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.06), 0 0 0 0 transparent;
+}
+
+.button {
+  border: none;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: color .3s, box-shadow .3s, background .3s;
+  display: inline-block;
+  padding: 4px 9px 2px;
+  border-radius: 4px;
+  background: #fff;
+  color: black;
+  font-size: 0.8em;
+  cursor: hand;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(50,50,93,.1), 0 2px 5px 0 rgba(50,50,93,.08), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent;
+}
+
+.button:hover {
+  box-shadow: 0 0 0 1px rgba(50,50,93,.1), 0 2px 5px 0 rgba(50,50,93,.1), 0 3px 9px 0 rgba(50,50,93,.08), 0 1px 1.5px 0 rgba(0,0,0,.08), 0 1px 2px 0 rgba(0,0,0,.08);
+}
+
+.button:active {
+  box-shadow: 0 0 0 1px rgba(50,50,93,.08), 0 2px 5px 0 rgba(50,50,93,.06), 0 1px 1.5px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.06), 0 0 0 0 transparent;
+}
+
+.title {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #989898;
+}
+
+.print-queue {
+  display: table;
+  width: 100%;
+}
+
+.print-queue .print, .print-queue .header {
+  display: table-row;
+}
+
+.print-queue .header span {
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 2px solid lightgray;
+}
+
+.print-queue .print, a:not(.button) {
+  text-decoration: none;
+  color: #1c7ace;
+}
+
+.print-queue .print:hover, a:not(.button):hover {
+  color: #005db1;
+}
+
+.print-queue .print span.status::before {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  margin-right: 7px;
+  display: inline-block;
+  bottom: 3px;
+  position: relative;
+  content: "";
+}
+
+.print-queue .print.complete span.status::before {
+  background: #07c107;
+}
+
+.print-queue .print.printing span.status::before {
+  background: #ffbf0c;
+}
+
+.print-queue .print.error span.status::before {
+  background: #ff5252;
+}
+
+.print-queue .print.queued span.status::before {
+  background: #d2d2d2;
+}
+
+.print-queue .print span {
+  padding-top: 10px;
+}
+
+.print-queue .print:not(:last-of-type) span {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+/*.print-queue .print .name {
+  display: inline-block;
+  width: 40%;
+}*/
+
+.print-queue .print span, .print-queue .header span {
+  display: table-cell;
+  font-size: 0.9em;
+}
+
+/* Messages */
+#messages ul {
+  list-style-type: none;
+}
+
+#messages ul.success {
+  background: #3ab937;
+  color: white;
+  font-size: 1em;
+}
+
+#messages ul.success li::before {
+  content: "";
+  background-image: url(/img/check.png);
+  width: 4px;
+  height: 10px;
+  padding-right: 10px;
+  margin-right: 5px;
+  background-size: cover;
+  display: inline-block;
+}
+
+/* Forms */
+
+.field:first-of-type {
+  margin-top: 0;
+}
+
+.field label {
+  display: block;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.field input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 3px;
+  background: white;
+  box-shadow: 0 0 0 1px rgba(50,50,93,.1), 0 2px 5px 0 rgba(50,50,93,.08), 0 1px 1.5px 0 rgba(0,0,0,.07), 0 1px 2px 0 rgba(0,0,0,.08), 0 0 0 0 transparent;
+}

@@ -1,0 +1,37 @@
+<div class="title">
+  New Printer
+</div>
+
+<div class="general-content">
+  <p>
+    All you need to add a printer is its IP address. All other info will be
+    gathered automatically upon initial connection with the printer.
+  </p>
+  
+  <br>
+
+  <form action="/printers/new" method="POST">
+    <p class="field">
+      <label for="authtype">Authentication Type</label>
+      
+      <select name="authtype" id="authtype" required>
+        <option value="local">Local (over LAN with IP address)</option>
+        <option value="remote">Remote (over MakerBot Reflector with ID)</option>
+      </select>
+    </p>
+
+    <p class="field">
+      <label for="ip">IP (only needed if local)</label>
+      <input type="text" id="ip" name="ip">
+    </p>
+
+    <p class="field">
+      <label for="reflectorid">Reflector ID (only needed if remote)</label>
+      <input type="text" id="reflectorid" name="reflectorid">
+    </p>
+
+    <p class="field">
+      <button class="button">Add Printer</button>
+    </p>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>MakerBot Webview</title>
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">    
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+  </head>
+  <body>
+    <div class="site-header">
+      <a href="/">Home</a>
+      <% if(user){ %>
+      &mdash; <a href="/prints">Print Queue</a>
+      <% } %>
+
+      <% if(user && user.admin){ %>
+      &mdash; <a href="/printers">Manage Printers</a>
+      <% } %>
+      <div class="user-options">
+        <% if(user){ %>
+        Logged in as <%= user.firstName %> <%= user.lastName %> &mdash; <a href="/auth/logout">Log Out</a>
+        <% }else{ %>
+        <a href="/auth/login">Log In</a>
+        &mdash; <a href="/auth/register">Register</a>
+        <% } %>
+      </div>
+    </div>
+    <div class="content">
+      <%- messages() %>
+      <%- body %>
+    </div>
+    <div class="footer">
+      &copy; <a href="https://tjhorner.com">TJ Horner</a> 2017 &mdash; <a href="/about">About</a> &mdash; <a href="https://github.com/tjhorner/MakerbotWebUI">Open Source</a>
+    </div>
+  </body>
+</html>

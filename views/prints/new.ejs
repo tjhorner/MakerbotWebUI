@@ -1,0 +1,38 @@
+<div class="title">
+  New Print
+</div>
+
+<div class="form">
+  <a href="/prints" class="button">&#8592; Back to prints</a>
+  
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="file"/>
+    <div class="dragdrop">
+      Drop a <code>.makerbot</code> file here to start
+    </div>
+
+    <div class="preview">
+      <div class="left">
+        <div class="image"></div>
+      </div>
+      
+      <div class="right">
+        <div class="name"></div>
+        <div class="print-time"></div>
+        <div class="filament-used"></div>
+
+        <p>Everything look good?</p>
+
+        <p>
+          <button class="button">Add it to the queue</button>
+        </p>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- include what we need for uploading -->
+<script src="/js/zip.js"></script>
+<script src="/js/zip-ext.js"></script>
+<script src="/js/moment.min.js"></script>
+<script src="/js/upload.js"></script>

@@ -1,0 +1,15 @@
+<div class="title">
+  <%= printer.name %>
+</div>
+
+<div class="general-content">
+  <a href="/printers" class="button">&#8592; Back to printers</a>
+
+  <h1>Printer Metadata</h1>
+
+  <pre><%= JSON.stringify(printer.state, null, 2) %></pre>
+
+  <h1>Printer Snapshot</h1>
+  
+  <img src="/printers/<%= printer.id %>/camera.jpg"></img>
+</div>

@@ -1,0 +1,25 @@
+<div class="title">
+  Printers &mdash; <a href="/printers/new">Add Printer</a>
+</div>
+
+<div class="print-queue">
+  <% if(printers.length){ %>
+  <div class="header">
+    <span>Name</span>
+    <span>IP/Reflector ID</span>
+    <span>Model</span>
+    <span>Connection Status</span>
+  </div>
+
+  <% printers.forEach(printer => { %>
+  <a href="/printers/<%= printer.id %>" class="print <%= printer.connected ? 'complete' : 'error' %>">
+    <span class="name"><%= printer.name || "—" %></span>
+    <span class="ip"><%= printer.ip ? printer.ip : printer.reflectorId %></span>
+    <span class="type"><%= printer.state ? printer.state.bot_type : "—" %></span>
+    <span class="status"><%= printer.connected ? "Connected" : "Disconnected" %></span>
+  </a>
+  <% }) %>
+  <% }else{ %>
+  <span class="muted center">You haven't added any printers.</span>
+  <% } %>
+</div>

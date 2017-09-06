@@ -1,0 +1,61 @@
+<div class="print-status-bar printing">
+  <strong>Status:</strong> <%= timeLeft %>
+
+  <a href="/prints/new" class="button print-button">
+    Queue Print
+  </a>
+</div>
+
+<div class="title">
+  Your Prints
+</div>
+
+<div class="print-queue">
+  <% if(userPrints && userPrints.length){ %>
+  <div class="header">
+    <span>File</span>
+    <span>Printer</span>
+    <span>Status</span>
+  </div>
+
+  <% userPrints.forEach(function(print){ %>
+  <a href="/prints/<%= print.id %>" class="print <%= print.status().class %>">
+    <span class="name"><%= print.name %></span>
+    <span class="printer"><%= print.printer ? print.printer.name : "—" %></span>
+    <span class="status"><%- print.status().text %></span>
+  </a>
+  <% }) %>
+  <% }else{ %>
+  <span class="muted center">You don't have any prints. <a href="/prints/new">Want to queue one?</a></span>
+  <% } %>
+</div>
+
+<!-- div class="print-queue">
+  <span class="muted center">You don't have any prints. <a href="/prints/new">Want to queue one?</a></span>
+</div-->
+
+<div class="title">
+  Print Queue
+</div>
+
+<div class="print-queue">
+  <% if(prints.length){ %>
+  <div class="header">
+    <span>File</span>
+    <span>Printer</span>
+    <span>Status</span>
+    <span>Owner</span>
+  </div>
+
+  <% prints.forEach(function(print) { %>
+  <a href="/prints/<%= print.id %>" class="print <%= print.status().class %>">
+    <span class="name"><%= print.name %></span>
+    <span class="printer"><%= print.printer ? print.printer.name : "—" %></span>
+    <span class="status"><%- print.status().text %></span>
+    <span class="user"><%= print._creator.firstName %> <%= print._creator.lastName %></span>
+  </a>
+  <% }) %>
+  <% }else{ %>
+  <span class="muted center">No prints have been created... yet.</span>
+  <% } %>
+</div>

@@ -1,0 +1,32 @@
+{
+  "name": "makerbot-webui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjhorner/MakerbotWebUI"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-ejs-layouts": "^2.3.0",
+    "express-fileupload": "^0.1.3",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.3",
+    "makerbot-rpc": "^1.0.1",
+    "moment": "^2.18.1",
+    "mongoose": "^4.10.6",
+    "streamifier": "^0.1.1",
+    "unzip": "^0.1.11"
+  }
+}
