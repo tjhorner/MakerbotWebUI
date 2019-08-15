@@ -1,8 +1,6 @@
 # MakerBot WebUI
 
-[![bitHound Overall Score](https://www.bithound.io/github/tjhorner/MakerbotWebUI/badges/score.svg)](https://www.bithound.io/github/tjhorner/MakerbotWebUI)
-[![bitHound Dependencies](https://www.bithound.io/github/tjhorner/MakerbotWebUI/badges/dependencies.svg)](https://www.bithound.io/github/tjhorner/MakerbotWebUI/master/dependencies/npm)
-[![bitHound Code](https://www.bithound.io/github/tjhorner/MakerbotWebUI/badges/code.svg)](https://www.bithound.io/github/tjhorner/MakerbotWebUI)
+**Please note:** This project is now abandoned and has been archived. I have recently been employed by MakerBot, so I'm now working on some Secret Stuff™ there. Stay tuned!
 
 **This software is in _beta_! Please report issues [here](https://github.com/tjhorner/MakerbotWebUI/issues), but make sure you're not creating dupes. Thank you!**
 
